@@ -28,7 +28,7 @@ public class Calculator
                     Double num = scanner.nextDouble();
                     System.out.println("Square root of " + num + " is " + calculator.sqrt(num));
             }
-            System.out.print("Do you want to continue:(y/n):");
+            System.out.print("Do you want to continue(y/n):");
             ch = scanner.next().charAt(0);
         } while (ch == 'y');
 
