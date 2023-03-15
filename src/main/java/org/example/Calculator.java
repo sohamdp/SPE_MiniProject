@@ -8,10 +8,24 @@ public class Calculator
     {
         return Math.sqrt(x);
     }
+    public double factorial(double x)
+    {
+        return fact(x);
+    }
+    public double fact(double x)
+    {
+        Integer temp=1;
+        for(Integer i=1;i<=x;i++)
+        {
+            temp=i*temp;
+        }
+        return temp;
+    }
     public static void main(String[] args)
     {
         Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
+        double num;
         System.out.println("*******************MiniProject********************\n");
         char ch;
         do {
@@ -25,8 +39,13 @@ public class Calculator
             {
                 case 1:
                     System.out.print("Enter Number:");
-                    Double num = scanner.nextDouble();
+                    num = scanner.nextDouble();
                     System.out.println("Square root of " + num + " is " + calculator.sqrt(num));
+                    break;
+                case 2:
+                    System.out.print("Enter Number:");
+                    num = scanner.nextDouble();
+                    System.out.println("Factorial of " + num + " is " + calculator.factorial(num));
             }
             System.out.print("Do you want to continue(y/n):");
             ch = scanner.next().charAt(0);
