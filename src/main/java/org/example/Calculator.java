@@ -21,6 +21,10 @@ public class Calculator
         }
         return temp;
     }
+    public  double logarithm(double x)
+    {
+        return Math.log(x);
+    }
     public static void main(String[] args)
     {
         Calculator calculator = new Calculator();
@@ -46,6 +50,11 @@ public class Calculator
                     System.out.print("Enter Number:");
                     num = scanner.nextDouble();
                     System.out.println("Factorial of " + num + " is " + calculator.factorial(num));
+                case 3:
+                    System.out.print("Enter Number:");
+                    num = scanner.nextDouble();
+                    System.out.println("Natural log of " + num + " is " + calculator.logarithm(num));
+
             }
             System.out.print("Do you want to continue(y/n):");
             ch = scanner.next().charAt(0);

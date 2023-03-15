@@ -34,4 +34,15 @@ public class CalculatorTestCases {
         assertNotEquals(52,calculator.factorial(25),DELTA);
         assertNotEquals(12,calculator.factorial(1),DELTA);
     }
+
+    @Test
+    public void test_cases_for_naturallog()
+    {
+        assertEquals(0, calculator.logarithm(1), DELTA);
+        assertEquals(2.302585092994046,calculator.logarithm(10),DELTA);
+        assertEquals(0.6931471805599453,calculator.logarithm(2),DELTA);
+        assertNotEquals(3,calculator.factorial(9),DELTA);
+        assertNotEquals(77,calculator.factorial(12),DELTA);
+    }
+
 }
