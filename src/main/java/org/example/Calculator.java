@@ -6,7 +6,25 @@ public class Calculator
 {
     public double sqrt(double x)
     {
-        return Math.sqrt(x);
+        double result=0;
+        try
+        {
+            if(x<0)
+            {
+                result=Double.NaN;
+                throw new ArithmeticException("square root of negative number is not possible");
+            }
+            else
+            {
+                result=Math.sqrt(x);
+            }
+        }
+        catch (ArithmeticException error)
+        {
+            System.out.println(error.getLocalizedMessage());
+        }
+        return result;
+
     }
     public double factorial(double x)
     {
@@ -23,24 +41,59 @@ public class Calculator
     }
     public  double logarithm(double x)
     {
-        return Math.log(x);
+        double result=0;
+        try
+        {
+            if(x<=0)
+            {
+                result=Double.NaN;
+                throw new ArithmeticException("Natural Log for 0 and negative number is not possible");
+            }
+            else
+            {
+                result=Math.log(x);
+            }
+        }
+        catch (ArithmeticException error)
+        {
+            System.out.println(error.getLocalizedMessage());
+        }
+        return result;
     }
     public double power_function(double x1,double x2)
     {
-        return Math.pow(x1,x2);
+        double result=0;
+        try
+        {
+            if(x1==0 && x2==0)
+            {
+                result=Double.NaN;
+                throw new ArithmeticException("Pow(0,0) is not possible");
+            }
+            else
+            {
+                result=Math.pow(x1, x2);
+            }
+            return result;
+        }
+        catch (ArithmeticException error)
+        {
+            System.out.println(error.getLocalizedMessage());
+        }
+        return result;
     }
     public static void main(String[] args)
     {
         Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
         double num,num1;
-        System.out.println("*******************MiniProject********************\n");
+        System.out.println("\n*******************MiniProject********************\n");
         char ch;
         do {
-            System.out.println("1.Square root function - √x");
-            System.out.println("2.Factorial function - x!");
-            System.out.println("3.Natural logarithm (base е) - ln(x)");
-            System.out.println("4.Power function - xb");
+            System.out.println("1.Square root function : √x");
+            System.out.println("2.Factorial function : x!");
+            System.out.println("3.Natural logarithm (base е) : ln(x)");
+            System.out.println("4.Power function : xb");
             System.out.print("Enter your choice:");
             int choice = scanner.nextInt();
             switch (choice)
