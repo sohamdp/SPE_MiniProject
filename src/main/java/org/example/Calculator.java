@@ -25,11 +25,15 @@ public class Calculator
     {
         return Math.log(x);
     }
+    public double power_function(double x1,double x2)
+    {
+        return Math.pow(x1,x2);
+    }
     public static void main(String[] args)
     {
         Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
-        double num;
+        double num,num1;
         System.out.println("*******************MiniProject********************\n");
         char ch;
         do {
@@ -50,10 +54,18 @@ public class Calculator
                     System.out.print("Enter Number:");
                     num = scanner.nextDouble();
                     System.out.println("Factorial of " + num + " is " + calculator.factorial(num));
+                    break;
                 case 3:
                     System.out.print("Enter Number:");
                     num = scanner.nextDouble();
                     System.out.println("Natural log of " + num + " is " + calculator.logarithm(num));
+                    break;
+                case 4:
+                    System.out.print("Enter base Number:");
+                    num = scanner.nextDouble();
+                    System.out.print("Enter power for Base:");
+                    num1=scanner.nextDouble();
+                    System.out.println("Natural log of " + num + " is " + calculator.power_function(num,num1));
 
             }
             System.out.print("Do you want to continue(y/n):");

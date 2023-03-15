@@ -44,5 +44,18 @@ public class CalculatorTestCases {
         assertNotEquals(3,calculator.factorial(9),DELTA);
         assertNotEquals(77,calculator.factorial(12),DELTA);
     }
+    @Test
+    public void test_cases_for_power_function()
+    {
+        assertEquals(0, calculator.power_function(0,1), DELTA);
+        assertEquals(1,calculator.power_function(1,0),DELTA);
+        assertEquals(8,calculator.power_function(2,3),DELTA);
+        assertEquals(10000,calculator.power_function(10,4),DELTA);
+        assertEquals(7776,calculator.power_function(6,5),DELTA);
+        assertNotEquals(15,calculator.power_function(2,4),DELTA);
+        assertNotEquals(7776,calculator.power_function(6,6),DELTA);
+        assertNotEquals(225,calculator.power_function(25,2),DELTA);
+        assertNotEquals(12,calculator.power_function(1,1),DELTA);
+    }
 
 }
